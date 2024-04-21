@@ -1,8 +1,11 @@
-﻿namespace VanHorn_WebServices_Final.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace VanHorn_WebServices_Final.Models
 {
     public class ServiceProvider
     {
-        public int BusinessId { get; set; }
+        [Key]
+        public int SPId { get; set; }
         public string BusinessName { get; set; }
         public string StreetAddress { get; set; }
         public string City { get; set; }

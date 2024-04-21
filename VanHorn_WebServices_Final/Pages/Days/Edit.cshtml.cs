@@ -29,7 +29,7 @@ namespace VanHorn_WebServices_Final.Pages.Days
                 return NotFound();
             }
 
-            var day =  await _context.Days.FirstOrDefaultAsync(m => m.DayId == id);
+            var day =  await _context.Days.FirstOrDefaultAsync(m => m.DId == id);
             if (day == null)
             {
                 return NotFound();
@@ -55,7 +55,7 @@ namespace VanHorn_WebServices_Final.Pages.Days
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!DayExists(Day.DayId))
+                if (!DayExists(Day.DId))
                 {
                     return NotFound();
                 }
@@ -70,7 +70,7 @@ namespace VanHorn_WebServices_Final.Pages.Days
 
         private bool DayExists(int id)
         {
-            return _context.Days.Any(e => e.DayId == id);
+            return _context.Days.Any(e => e.DId == id);
         }
     }
 }

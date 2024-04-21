@@ -1,8 +1,11 @@
-﻿namespace VanHorn_WebServices_Final.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace VanHorn_WebServices_Final.Models
 {
     public class Timeslot
     {
-        public int TimeslotId { get; set; }
+        [Key]
+        public int TId { get; set; }
         public Day Day { get; set; }
         public int? DayId { get; set; }
         public Customer Customer { get; set; }
