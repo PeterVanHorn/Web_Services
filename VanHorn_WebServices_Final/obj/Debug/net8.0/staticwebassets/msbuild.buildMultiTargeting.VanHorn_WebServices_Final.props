@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\VanHorn_WebServices_Final.props" />
+</Project>

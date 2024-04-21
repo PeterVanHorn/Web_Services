@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\VanHorn_WebServices_Final.props" />
+</Project>
