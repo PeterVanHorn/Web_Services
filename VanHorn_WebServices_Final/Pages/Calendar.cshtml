@@ -1,0 +1,46 @@
+﻿@page
+@model VanHorn_WebServices_Final.Pages.CalendarModel
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendar</title>
+    <style>
+        /* Style for the calendar */
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+            grid-gap: 5px; /* Gap between grid items */
+        }
+        .day {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calendar</h1>
+    <div class="calendar">
+        <!-- Days of the week -->
+        <div class="day">Sun</div>
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+        <div class="day">Fri</div>
+        <div class="day">Sat</div>
+
+        <!-- Calendar days -->
+        <!-- Example: Show days 1 to 30 -->
+        @for (var day = 1; day <= 30; day++)
+        {
+            <div class="day">
+                @day
+                <a asp-page="/Days/Index">Details</a>
+            </div>
+        };
+    </div>
+</body>
+</html>

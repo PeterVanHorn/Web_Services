@@ -1,0 +1,36 @@
+﻿@page
+@model VanHorn_WebServices_Final.Pages.Days.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Day[0].DayName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Day) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DayName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.DayId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.DayId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.DayId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
