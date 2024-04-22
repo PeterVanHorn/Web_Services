@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fHbwnWQDFR0mYxEyPHtmB/X/eYBjKZp4XGKLzce4YqU=",
+  "Hash": "Jf7i8Fe1gT1yj+6hJCjDeB4aBPjLD/+OJLIq9h9Sd+w=",
   "Source": "VanHorn_WebServices_Final",
   "BasePath": "_content/VanHorn_WebServices_Final",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\wwwroot\\style.css",
+      "SourceId": "VanHorn_WebServices_Final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\wwwroot\\",
+      "BasePath": "_content/VanHorn_WebServices_Final",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
     }
   ]
 }

@@ -3,44 +3,72 @@
 @{
 }
 <!DOCTYPE html>
-<html>
+<html dir="ltr">
 <head>
+    <meta charset="utf-8" />
     <title>Calendar</title>
-    <style>
-        /* Style for the calendar */
-        .calendar {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
-            grid-gap: 5px; /* Gap between grid items */
-        }
-        .day {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <h1>Calendar</h1>
-    <div class="calendar">
-        <!-- Days of the week -->
-        <div class="day">Sun</div>
-        <div class="day">Mon</div>
-        <div class="day">Tue</div>
-        <div class="day">Wed</div>
-        <div class="day">Thu</div>
-        <div class="day">Fri</div>
-        <div class="day">Sat</div>
-
-        <!-- Calendar days -->
-        <!-- Example: Show days 1 to 30 -->
-        @for (var day = 1; day <= 30; day++)
-        {
-            <div class="day">
-                @day
-                <a asp-page="/Days/Index">Details</a>
+    <div class="wrapper">
+        <header>
+            <p class="current-date">April 2024</p>
+            <div class="icons">
+                <span class="material-symbols-rounded">chevron_left</span>
+                <span class="material-symbols-rounded">chevron_right</span>
             </div>
-        };
+        </header>
+        <div class="calendar">
+            <ul class="weeks">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+            </ul>
+            <ul class="days">
+                <li class="inactive">28</li>
+                <li class="inactive">29</li>
+                <li class="inactive">30</li>
+                <li class="inactive">31</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+                <li class="active">21</li>
+                <li>22</li>
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+                <li>29</li>
+                <li>30</li>
+                <li>1</li>
+            </ul>
+        </div>
     </div>
+    
 </body>
 </html>
