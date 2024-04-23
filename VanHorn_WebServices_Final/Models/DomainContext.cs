@@ -3,6 +3,7 @@ using NuGet.DependencyResolver;
 
 namespace VanHorn_WebServices_Final.Models
 {
+    // julian date might be usefull for resetting day objects once the day is in the past.
     public class DomainContext : DbContext
     {
         public DbSet<Timeslot> Timeslots { get; set; }
