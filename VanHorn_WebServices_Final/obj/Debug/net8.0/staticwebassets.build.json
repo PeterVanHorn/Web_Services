@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WNN6j+JF4qpHF1ONFykD7+Z+ayjTVWv1LGoQM7owlR8=",
+  "Hash": "Jf7i8Fe1gT1yj+6hJCjDeB4aBPjLD/+OJLIq9h9Sd+w=",
   "Source": "VanHorn_WebServices_Final",
   "BasePath": "_content/VanHorn_WebServices_Final",
   "Mode": "Default",
@@ -91,25 +91,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
-      "Identity": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\wwwroot\\js\\script.js",
-      "SourceId": "VanHorn_WebServices_Final",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\wwwroot\\",
-      "BasePath": "_content/VanHorn_WebServices_Final",
-      "RelativePath": "js/script.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\script.js"
     },
     {
       "Identity": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\wwwroot\\js\\site.js",
