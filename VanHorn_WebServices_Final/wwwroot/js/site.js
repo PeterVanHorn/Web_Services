@@ -13,6 +13,18 @@ currMonth = date.getMonth();
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 const renderCalendar = () => {
+
+    // experimental code for clicking on days to view their details page
+    for (let i = 1; i <= lastDateofMonth; i++) {
+        // Add unique IDs to each day element
+        let dayId = `day-${currYear}-${currMonth + 1}-${i}`;
+        let isToday = i === date.getDate() && currMonth === new Date().getMonth()
+            && currYear === new Date().getFullYear() ? "active" : "";
+        liTag += `<li id="${dayId}" class="${isToday}">${i}</li>`;
+    }
+
+
+
     let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // get first day of month
         lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), //get last date of month
         lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), //get last day of month
@@ -53,5 +65,16 @@ prevNextIcon.forEach(icon => {
             date = new Date();
         }
         renderCalendar();
+    });
+});
+
+// Add click event listener to each day
+document.querySelectorAll('.days li').forEach(day => {
+    day.addEventListener('click', () => {
+        // Extract the day, month, and year from the day ID
+        let [_, year, month, dayOfMonth] = day.id.split('-');
+
+        // Redirect to details page with the selected date information
+        window.location.href = `/details?year=${year}&month=${month}&day=${dayOfMonth}`;
     });
 });
