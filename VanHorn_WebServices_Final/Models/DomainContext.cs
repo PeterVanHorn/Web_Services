@@ -31,7 +31,9 @@ namespace VanHorn_WebServices_Final.Models
                 .OnDelete(DeleteBehavior.Cascade);
 
             IList<Day> days = new List<Day>();
-            days.Add(new Day() {Id = new DateTime(2024,4,27), Timeslots = [] });
+            DateTime date1 = new DateTime(2024, 04, 27);
+            string datestring1 = date1.ToString("yyyy-MM-dd");
+            days.Add(new Day() {Id = datestring1, Timeslots = [] });
             modelBuilder.Entity<Day>().HasData(days);
 
             IList<Customer> customers = new List<Customer>();

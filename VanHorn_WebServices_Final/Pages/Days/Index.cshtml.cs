@@ -22,6 +22,7 @@ namespace VanHorn_WebServices_Final.Pages.Days
 
         public async Task OnGetAsync()
         {
+            _context.Database.EnsureCreated();
             Day = await _context.Days.ToListAsync();
         }
     }

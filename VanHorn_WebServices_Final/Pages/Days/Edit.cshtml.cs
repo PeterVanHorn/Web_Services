@@ -22,7 +22,7 @@ namespace VanHorn_WebServices_Final.Pages.Days
         [BindProperty]
         public Day Day { get; set; } = default!;
 
-        public async Task<IActionResult> OnGetAsync(DateTime? id)
+        public async Task<IActionResult> OnGetAsync(string id)
         {
             if (id == null)
             {
@@ -68,7 +68,7 @@ namespace VanHorn_WebServices_Final.Pages.Days
             return RedirectToPage("./Index");
         }
 
-        private bool DayExists(DateTime id)
+        private bool DayExists(string id)
         {
             return _context.Days.Any(e => e.Id == id);
         }

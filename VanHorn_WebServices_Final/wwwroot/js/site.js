@@ -34,7 +34,9 @@ const renderCalendar = () => {
     // experimental code for clicking on days to view their details page
     for (let i = 1; i <= lastDateofMonth; i++) {
         // Add unique IDs to each day element
-        let dayId = `day-${currYear}-${currMonth + 1}-${i}`;
+        let monthFormatted = (currMonth + 1).toString().padStart(2, '0');
+        let dayFormatted = i.toString().padStart(2, '0');
+        let dayId = `day-${currYear}-${monthFormatted}-${dayFormatted}`;
         let isToday = i === date.getDate() && currMonth === new Date().getMonth()
             && currYear === new Date().getFullYear() ? "active" : "";
         liTag += `<li id="${dayId}" class="${isToday}">${i}</li>`;
@@ -72,6 +74,6 @@ document.querySelectorAll('.days li').forEach(day => {
         let [_, year, month, dayOfMonth] = day.id.split('-');
 
         // Redirect to details page with the selected date information
-        window.location.href = `/details?year=${year}&month=${month}&day=${dayOfMonth}`;
+        window.location.href = `/Days/Details?id=${year}-${month}-${dayOfMonth}`;
     });
 });

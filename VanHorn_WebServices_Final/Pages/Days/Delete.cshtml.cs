@@ -21,7 +21,7 @@ namespace VanHorn_WebServices_Final.Pages.Days
         [BindProperty]
         public Day Day { get; set; } = default!;
 
-        public async Task<IActionResult> OnGetAsync(DateTime? id)
+        public async Task<IActionResult> OnGetAsync(string? id)
         {
             if (id == null)
             {

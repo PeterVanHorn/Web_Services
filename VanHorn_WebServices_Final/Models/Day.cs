@@ -5,7 +5,7 @@ namespace VanHorn_WebServices_Final.Models
     public class Day
     {
         [Key]
-        public DateTime Id { get; set; }
+        public string Id { get; set; }
         public virtual List<Timeslot> Timeslots { get; set; }
     }
 }

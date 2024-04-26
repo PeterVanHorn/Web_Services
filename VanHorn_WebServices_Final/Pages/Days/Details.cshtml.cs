@@ -20,8 +20,9 @@ namespace VanHorn_WebServices_Final.Pages.Days
 
         public Day Day { get; set; } = default!;
 
-        public async Task<IActionResult> OnGetAsync(DateTime? id)
+        public async Task<IActionResult> OnGetAsync(string id)
         {
+            _context.Database.EnsureCreated();
             if (id == null)
             {
                 return NotFound();
