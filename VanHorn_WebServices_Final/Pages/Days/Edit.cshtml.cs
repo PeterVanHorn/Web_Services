@@ -22,14 +22,14 @@ namespace VanHorn_WebServices_Final.Pages.Days
         [BindProperty]
         public Day Day { get; set; } = default!;
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public async Task<IActionResult> OnGetAsync(DateTime? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var day =  await _context.Days.FirstOrDefaultAsync(m => m.DId == id);
+            var day =  await _context.Days.FirstOrDefaultAsync(m => m.Id == id);
             if (day == null)
             {
                 return NotFound();
@@ -55,7 +55,7 @@ namespace VanHorn_WebServices_Final.Pages.Days
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!DayExists(Day.DId))
+                if (!DayExists(Day.Id))
                 {
                     return NotFound();
                 }
@@ -68,9 +68,9 @@ namespace VanHorn_WebServices_Final.Pages.Days
             return RedirectToPage("./Index");
         }
 
-        private bool DayExists(int id)
+        private bool DayExists(DateTime id)
         {
-            return _context.Days.Any(e => e.DId == id);
+            return _context.Days.Any(e => e.Id == id);
         }
     }
 }

@@ -20,14 +20,14 @@ namespace VanHorn_WebServices_Final.Pages.Days
 
         public Day Day { get; set; } = default!;
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public async Task<IActionResult> OnGetAsync(DateTime? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var day = await _context.Days.FirstOrDefaultAsync(m => m.DId == id);
+            var day = await _context.Days.FirstOrDefaultAsync(m => m.Id == id);
             if (day == null)
             {
                 return NotFound();

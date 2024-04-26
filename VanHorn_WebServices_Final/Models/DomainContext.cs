@@ -8,7 +8,6 @@ namespace VanHorn_WebServices_Final.Models
     {
         public DbSet<Timeslot> Timeslots { get; set; }
         public DbSet<Day> Days { get; set; }
-        public DbSet<Month> Months { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<ServiceProvider> ServiceProviders { get; set; }
         public DomainContext(DbContextOptions<DomainContext> options) : base(options)
@@ -16,11 +15,6 @@ namespace VanHorn_WebServices_Final.Models
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Month>()
-                .HasMany(e => e.Days)
-                .WithOne(q => q.Month)
-                .OnDelete(DeleteBehavior.Cascade);
-
             modelBuilder.Entity<Day>()
                 .HasMany(e => e.Timeslots)
                 .WithOne(q => q.Day)
@@ -36,28 +30,17 @@ namespace VanHorn_WebServices_Final.Models
                 .WithOne(q => q.ServiceProvider)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            IList<Month> months = new List<Month>();
-
-            modelBuilder.Entity<Month>().HasData(months);
-
             IList<Day> days = new List<Day>();
-            days.Add(new Day() { DId = 1, DayName = "Sunday", Timeslots = [] } );
-            days.Add(new Day() { DId = 2, DayName = "Monday", Timeslots = [] });
-            days.Add(new Day() { DId = 3, DayName = "Tuesday", Timeslots = [] });
-            days.Add(new Day() { DId = 4, DayName = "Wednesday", Timeslots = [] });
-            days.Add(new Day() { DId = 5, DayName = "Thursday", Timeslots = [] });
-            days.Add(new Day() { DId = 6, DayName = "Friday", Timeslots = [] });
-            days.Add(new Day() { DId = 7, DayName = "Saturday", Timeslots = [] });
+            days.Add(new Day() {Id = new DateTime(2024,4,27), Timeslots = [] });
+            modelBuilder.Entity<Day>().HasData(days);
 
-            modelBuilder.Entity<Month>().HasData(days);
-
-            IList<Timeslot> timeslots = new List<Timeslot>();
-
-            modelBuilder.Entity<Month>().HasData(timeslots);
+            IList<Customer> customers = new List<Customer>();
+            customers.Add(new Customer() {CId = 1, FirstName = "Bob", LastName = "Dole", City = "Helena", State = "MT", Country = "United States", Email = "Bob.Dole@hotmail.com", Phone = "406-406-3333", Timeslots = [] });
+            modelBuilder.Entity<Customer>().HasData(customers);
 
             IList<ServiceProvider> serviceproviders = new List<ServiceProvider>();
-
-            modelBuilder.Entity<Month>().HasData(serviceproviders);
+            serviceproviders.Add(new ServiceProvider() { SPId = 1, BusinessName = "ABC Plumbing", City = "Helena", State = "MT", Country = "United States", Phone = "406-111-2222", Timeslots = [] });
+            modelBuilder.Entity<ServiceProvider>().HasData(serviceproviders);
         }
     }
 }
