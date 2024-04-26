@@ -13,18 +13,6 @@ currMonth = date.getMonth();
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 const renderCalendar = () => {
-
-    // experimental code for clicking on days to view their details page
-    for (let i = 1; i <= lastDateofMonth; i++) {
-        // Add unique IDs to each day element
-        let dayId = `day-${currYear}-${currMonth + 1}-${i}`;
-        let isToday = i === date.getDate() && currMonth === new Date().getMonth()
-            && currYear === new Date().getFullYear() ? "active" : "";
-        liTag += `<li id="${dayId}" class="${isToday}">${i}</li>`;
-    }
-
-
-
     let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // get first day of month
         lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), //get last date of month
         lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), //get last day of month
@@ -36,11 +24,20 @@ const renderCalendar = () => {
         liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
     }
 
-    for (let i = 1; i <= lastDateofMonth; i++) { // create li of all current month days
-        // add active class to li if the current day, month and year all match
+    //for (let i = 1; i <= lastDateofMonth; i++) { // create li of all current month days
+    //    // add active class to li if the current day, month and year all match
+    //    let isToday = i === date.getDate() && currMonth === new Date().getMonth()
+    //        && currYear === new Date().getFullYear() ? "active" : "";
+    //    liTag += `<li class="${isToday}">${i}</li>`;
+    //}
+
+    // experimental code for clicking on days to view their details page
+    for (let i = 1; i <= lastDateofMonth; i++) {
+        // Add unique IDs to each day element
+        let dayId = `day-${currYear}-${currMonth + 1}-${i}`;
         let isToday = i === date.getDate() && currMonth === new Date().getMonth()
             && currYear === new Date().getFullYear() ? "active" : "";
-        liTag += `<li class="${isToday}">${i}</li>`;
+        liTag += `<li id="${dayId}" class="${isToday}">${i}</li>`;
     }
 
     for (let i = lastDayofMonth; i < 6; i++) { // create li of next month first days
