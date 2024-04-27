@@ -7844,11 +7844,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repos\\Web_Services\\VanHorn_WebServices_Final\\VanHorn_WebServices_Final.csproj",
+      "projectUniqueName": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\VanHorn_WebServices_Final.csproj",
       "projectName": "VanHorn_WebServices_Final",
-      "projectPath": "C:\\repos\\Web_Services\\VanHorn_WebServices_Final\\VanHorn_WebServices_Final.csproj",
+      "projectPath": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\VanHorn_WebServices_Final.csproj",
       "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
-      "outputPath": "C:\\repos\\Web_Services\\VanHorn_WebServices_Final\\obj\\",
+      "outputPath": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
