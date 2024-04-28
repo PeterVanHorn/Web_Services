@@ -1,0 +1,37 @@
+﻿@page
+@model VanHorn_WebServices_Final.Pages.Timeslots.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Timeslot</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Timeslot.DayId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Timeslot.DayId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Timeslot.Customer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Timeslot.Customer.CId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Timeslot.ServiceProvider)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Timeslot.ServiceProvider.SPId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Timeslot.TId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

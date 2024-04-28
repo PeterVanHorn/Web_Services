@@ -82,6 +82,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGltZXNsb3RzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGltZXNsb3RzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGltZXNsb3RzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGltZXNsb3RzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGltZXNsb3RzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

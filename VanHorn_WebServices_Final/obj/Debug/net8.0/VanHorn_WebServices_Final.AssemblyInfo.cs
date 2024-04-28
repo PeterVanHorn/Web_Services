@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VanHorn_WebServices_Final")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65add458f527629cffbf9dff020a3bd04da3588b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3289fc1d216a08e12f480e909e745ca5ae6f15ff")]
 [assembly: System.Reflection.AssemblyProductAttribute("VanHorn_WebServices_Final")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VanHorn_WebServices_Final")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

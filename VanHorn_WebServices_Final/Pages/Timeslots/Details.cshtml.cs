@@ -4,11 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
 using VanHorn_WebServices_Final.Models;
 
-namespace VanHorn_WebServices_Final.Pages.Days
+namespace VanHorn_WebServices_Final.Pages.Timeslots
 {
     public class DetailsModel : PageModel
     {
@@ -19,26 +18,23 @@ namespace VanHorn_WebServices_Final.Pages.Days
             _context = context;
         }
 
-        public Day Day { get; set; } = default!;
-        public IList<Timeslot> Timeslots { get; set; } = default!;
+        public Timeslot Timeslot { get; set; } = default!;
 
-        public async Task<IActionResult> OnGetAsync(string id)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            _context.Database.EnsureCreated();
-            Timeslots = await _context.Timeslots.ToListAsync();
             if (id == null)
             {
                 return NotFound();
             }
 
-            var day = await _context.Days.FirstOrDefaultAsync(m => m.Id == id);
-            if (day == null)
+            var timeslot = await _context.Timeslots.FirstOrDefaultAsync(m => m.TId == id);
+            if (timeslot == null)
             {
                 return NotFound();
             }
             else
             {
-                Day = day;
+                Timeslot = timeslot;
             }
             return Page();
         }

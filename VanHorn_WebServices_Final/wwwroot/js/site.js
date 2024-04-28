@@ -73,7 +73,34 @@ document.querySelectorAll('.days li').forEach(day => {
         // Extract the day, month, and year from the day ID
         let [_, year, month, dayOfMonth] = day.id.split('-');
 
-        // Redirect to details page with the selected date information
-        window.location.href = `/Days/Details?id=${year}-${month}-${dayOfMonth}`;
+        // Create a Date object representing the clicked date
+        let clickedDate = `${year}-${month}-${dayOfMonth}`;
+
+        // Send an AJAX request to check for the existence of the day object
+        fetch('/Calendar?handler=OnPostCheckDayExistence', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ id: clickedDate }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.exists) {
+                    // If the day object exists, navigate to its details page
+                    window.location.href = `/Days/Details?id=${data.dayId}`;
+                } else {
+                    // If the day object doesn't exist, create it (not implemented here) and navigate to its details page
+                    // You can implement the creation logic here
+                    // For now, just redirect to a placeholder URL
+                    window.location.href = `/Days/Create?id=${clickedDate}`;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+        //// Redirect to details page with the selected date information
+        //window.location.href = `/Days/Details?id=${year}-${month}-${dayOfMonth}`;
     });
 });
