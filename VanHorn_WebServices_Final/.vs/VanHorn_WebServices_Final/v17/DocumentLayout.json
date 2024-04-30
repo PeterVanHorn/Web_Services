@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|c:\\githubrepos\\web_services\\vanhorn_webservices_final\\pages\\days\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|solutionrelative:pages\\days\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|c:\\githubrepos\\web_services\\vanhorn_webservices_final\\pages\\days\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|solutionrelative:pages\\days\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|c:\\githubrepos\\web_services\\vanhorn_webservices_final\\pages\\calendar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|solutionrelative:pages\\calendar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|c:\\githubrepos\\web_services\\vanhorn_webservices_final\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -19,8 +15,12 @@
       "RelativeMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|solutionrelative:pages\\calendar.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|c:\\githubrepos\\web_services\\vanhorn_webservices_final\\pages\\calendar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|solutionrelative:pages\\calendar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|c:\\githubrepos\\web_services\\vanhorn_webservices_final\\pages\\days\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|solutionrelative:pages\\days\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|c:\\githubrepos\\web_services\\vanhorn_webservices_final\\pages\\days\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|solutionrelative:pages\\days\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +30,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 184,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\Pages\\Days\\Details.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Days\\Details.cshtml",
+              "ToolTip": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\Pages\\Days\\Details.cshtml",
+              "RelativeToolTip": "Pages\\Days\\Details.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACAAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T00:35:03.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Calendar.cshtml.cs",
+              "DocumentMoniker": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\Pages\\Calendar.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Calendar.cshtml.cs",
+              "ToolTip": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\Pages\\Calendar.cshtml.cs",
+              "RelativeToolTip": "Pages\\Calendar.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T22:52:30.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Details.cshtml.cs",
               "DocumentMoniker": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\Pages\\Days\\Details.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Days\\Details.cshtml.cs",
@@ -48,51 +74,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\Pages\\Days\\Details.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Days\\Details.cshtml",
-              "ToolTip": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\Pages\\Days\\Details.cshtml",
-              "RelativeToolTip": "Pages\\Days\\Details.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-28T00:35:03.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Calendar.cshtml",
               "DocumentMoniker": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\Pages\\Calendar.cshtml",
               "RelativeDocumentMoniker": "Pages\\Calendar.cshtml",
               "ToolTip": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\Pages\\Calendar.cshtml",
               "RelativeToolTip": "Pages\\Calendar.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAcAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-22T02:22:21.332Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 184,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Calendar.cshtml.cs",
-              "DocumentMoniker": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\Pages\\Calendar.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Calendar.cshtml.cs",
-              "ToolTip": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\Pages\\Calendar.cshtml.cs",
-              "RelativeToolTip": "Pages\\Calendar.cshtml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T22:52:30.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "site.js",
               "DocumentMoniker": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
               "ToolTip": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\wwwroot\\js\\site.js",
               "RelativeToolTip": "wwwroot\\js\\site.js",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAAF8AAABMAAAA",
+              "ViewState": "AQIAADQAAAAAAAAAAAAIwEEAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-04-23T19:45:19.952Z",
               "EditorCaption": ""
