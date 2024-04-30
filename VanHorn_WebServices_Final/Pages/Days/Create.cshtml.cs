@@ -29,10 +29,10 @@ namespace VanHorn_WebServices_Final.Pages.Days
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return Page();
+            //}
 
             _context.Days.Add(Day);
             await _context.SaveChangesAsync();

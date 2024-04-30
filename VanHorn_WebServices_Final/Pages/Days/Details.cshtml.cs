@@ -34,7 +34,10 @@ namespace VanHorn_WebServices_Final.Pages.Days
             var day = await _context.Days.FirstOrDefaultAsync(m => m.Id == id);
             if (day == null)
             {
-                return NotFound();
+                Day newDay = new Day() { Id = id, Timeslots = [] };
+                _context.Days.Add(newDay);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("/Days/Details", new { id = id });
             }
             else
             {

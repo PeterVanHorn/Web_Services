@@ -1,4 +1,10 @@
-﻿const currentDate = document.querySelector(".current-date"),
+﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+// for details on configuring this project to bundle and minify static web assets.
+
+// Write your JavaScript code.
+
+
+const currentDate = document.querySelector(".current-date"),
     daysTag = document.querySelector(".days"),
     prevNextIcon = document.querySelectorAll(".icons span");
 
@@ -12,20 +18,13 @@ const renderCalendar = () => {
     let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // get first day of month
         lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), //get last date of month
         lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), //get last day of month
-    lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); //get last date of previous month
+        lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); //get last date of previous month
 
     let liTag = "";
 
     for (let i = firstDayofMonth; i > 0; i--) { // create li of previous month last days
         liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
     }
-
-    //for (let i = 1; i <= lastDateofMonth; i++) { // create li of all current month days
-    //    // add active class to li if the current day, month and year all match
-    //    let isToday = i === date.getDate() && currMonth === new Date().getMonth()
-    //        && currYear === new Date().getFullYear() ? "active" : "";
-    //    liTag += `<li class="${isToday}">${i}</li>`;
-    //}
 
     // experimental code for clicking on days to view their details page
     for (let i = 1; i <= lastDateofMonth; i++) {
@@ -46,6 +45,21 @@ const renderCalendar = () => {
 
     currentDate.innerText = `${months[currMonth]} ${currYear}`;
     daysTag.innerHTML = liTag;
+
+
+    //will this work? I don't know
+    document.querySelectorAll('.days li').forEach(day => {
+        day.addEventListener('click', () => {
+            // Extract the day, month, and year from the day ID
+            let [_, year, month, dayOfMonth] = day.id.split('-');
+
+            // Create a Date object representing the clicked date
+            let clickedDate = `${year}-${month}-${dayOfMonth}`;
+
+            // Redirect to details page with the selected date information
+            window.location.href = `/Days/Details?id=${clickedDate}`;
+        });
+    });
 }
 renderCalendar();
 
@@ -66,43 +80,15 @@ prevNextIcon.forEach(icon => {
 });
 
 // Add click event listener to each day
-document.querySelectorAll('.days li').forEach(day => {
-    day.addEventListener('click', () => {
-        // Extract the day, month, and year from the day ID
-        let [_, year, month, dayOfMonth] = day.id.split('-');
+//document.querySelectorAll('.days li').forEach(day => {
+//    day.addEventListener('click', () => {
+//        // Extract the day, month, and year from the day ID
+//        let [_, year, month, dayOfMonth] = day.id.split('-');
 
-        // Create a Date object representing the clicked date
-        let clickedDate = `${year}-${month}-${dayOfMonth}`;
+//        // Create a Date object representing the clicked date
+//        let clickedDate = `${year}-${month}-${dayOfMonth}`;
 
-        //// Send an AJAX request to check for the existence of the day object
-        //$.ajax({
-        //    type: 'POST',
-        //    url: `/Calendar?handler=OnPostCheckDayExistence&id=${clickedDate}`,
-        //    headers: {
-        //        'Content-Type': 'application/json',
-        //    },
-        //    data: JSON.stringify({ id: clickedDate }),
-        //    success: function (response) {
-        //        console.log(response);
-        //    }
-        //})
-        //    .then(response => response.json())
-        //    .then(data => {
-        //        if (data.exists) {
-        //            // If the day object exists, navigate to its details page
-        //            window.location.href = `/Days/Details?id=${clickedDate}`;
-        //        } else {
-        //            // If the day object doesn't exist, create it (not implemented here) and navigate to its details page
-        //            // You can implement the creation logic here
-        //            // For now, just redirect to a placeholder URL
-        //            window.location.href = `/Days/Create?id=${clickedDate}`;
-        //        }
-        //    })
-        //    .catch(error => {
-        //        console.error('Error:', error);
-        //    });
-
-        // Redirect to details page with the selected date information
-        window.location.href = `/Days/Details?id=${clickedDate}`;
-    });
-});
+//        // Redirect to details page with the selected date information
+//        window.location.href = `/Days/Details?id=${clickedDate}`;
+//    });
+//});

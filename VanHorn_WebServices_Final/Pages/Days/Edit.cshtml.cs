@@ -42,10 +42,10 @@ namespace VanHorn_WebServices_Final.Pages.Days
         // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return Page();
+            //}
 
             _context.Attach(Day).State = EntityState.Modified;
 
