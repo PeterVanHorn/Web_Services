@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using VanHorn_WebServices_Final.Models;
 
 namespace VanHorn_WebServices_Final.Pages.Timeslots
@@ -17,26 +18,25 @@ namespace VanHorn_WebServices_Final.Pages.Timeslots
         {
             _context = context;
         }
-
-        public IActionResult OnGet()
+        [BindProperty]
+        public Timeslot Timeslot { get; set; } = default!;
+        public async Task<IActionResult> OnGetAsync()
         {
-        ViewData["CustomerId"] = new SelectList(_context.Customers, "CId", "CId");
-        ViewData["ServiceProviderId"] = new SelectList(_context.ServiceProviders, "SPId", "SPId");
+            ViewData["CustomerId"] = new SelectList(_context.Customers, "CId", "LastName");
+            ViewData["ServiceProviderId"] = new SelectList(_context.ServiceProviders, "SPId", "BusinessName");
             return Page();
         }
 
-        [BindProperty]
-        public Timeslot Timeslot { get; set; } = default!;
-
-        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(string id)
         {
-            if (!ModelState.IsValid)
+            Timeslot timeslot = new Timeslot
             {
-                return Page();
-            }
-
-            _context.Timeslots.Add(Timeslot);
+                DayId = id,
+                CustomerId = Timeslot.CustomerId,
+                ServiceProviderId = Timeslot.ServiceProviderId,
+            };
+            
+            _context.Timeslots.Add(timeslot);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

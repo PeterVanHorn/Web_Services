@@ -34,12 +34,13 @@
                                 }
                             </ul>
                             string dayId = Model.Day.Id;
-                            <a asp-page="/Timeslots/Edit" asp-route-quizId="@dayId" asp-route-id="@item.TId">Edit TimeSlot</a>
+                            <a asp-page="/Timeslots/Edit" asp-route-dayId="@dayId" asp-route-id="@item.TId">Edit TimeSlot</a>
                         }
                     }
                     else
                     {
                         <p>Nothing scheduled for today</p>
+                        <a asp-page="/Timeslots/Create" asp-route-id="@Model.Day.Id">Schedule Appointment</a>
                     }
                 </td>
             </tr>
