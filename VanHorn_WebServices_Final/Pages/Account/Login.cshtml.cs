@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System.Security.Claims;
 using VanHorn_WebServices_Final.Models;
 using Credential = VanHorn_WebServices_Final.Models.Credential;
@@ -27,7 +28,7 @@ namespace VanHorn_WebServices_Final.Pages.Account
         }
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid) return Page();
+            //if (!ModelState.IsValid) return Page();
 
             Customers = await _context.Customers.ToListAsync();
             Credentials = await _context.Credentials.ToListAsync();
@@ -38,7 +39,8 @@ namespace VanHorn_WebServices_Final.Pages.Account
                 // create security context
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, "customer"),
+                    new Claim(ClaimTypes.Name, Customers[0].FirstName),
+                    new Claim(ClaimTypes.Email, Customers[0].Email),
                     new Claim("Customer", "True")
                 };
                 var identity = new ClaimsIdentity(claims, "ThisCookieAuth");
@@ -49,21 +51,21 @@ namespace VanHorn_WebServices_Final.Pages.Account
                 return RedirectToPage("/Index");
             }
 
-            if (Credential.UserName == "customer" && Credential.Password == "password")
-            {
-                // create security context
-                var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, "customer"),
-                    new Claim("Customer", "True")
-                };
-                var identity = new ClaimsIdentity(claims, "ThisCookieAuth");
-                ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
+            //if (Credential.UserName == "customer" && Credential.Password == "password")
+            //{
+            //    // create security context
+            //    var claims = new List<Claim>
+            //    {
+            //        new Claim(ClaimTypes.Name, "customer"),
+            //        new Claim("Customer", "True")
+            //    };
+            //    var identity = new ClaimsIdentity(claims, "ThisCookieAuth");
+            //    ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
 
-                await HttpContext.SignInAsync("ThisCookieAuth", claimsPrincipal);
+            //    await HttpContext.SignInAsync("ThisCookieAuth", claimsPrincipal);
 
-                return RedirectToPage("/Index");
-            }
+            //    return RedirectToPage("/Index");
+            //}
 
             if (Credential.UserName == "service" && Credential.Password == "password")
             {
@@ -80,6 +82,7 @@ namespace VanHorn_WebServices_Final.Pages.Account
 
                 return RedirectToPage("/Index");
             }
+
             return Page();
         }
     }

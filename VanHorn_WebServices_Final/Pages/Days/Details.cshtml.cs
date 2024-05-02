@@ -6,6 +6,7 @@ using Azure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.CodeAnalysis.Differencing;
 using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
 using VanHorn_WebServices_Final.Models;
@@ -83,4 +84,3 @@ namespace VanHorn_WebServices_Final.Pages.Days
         }
     }
 }
-//< a asp - page = "/Timeslots/Create" asp - route - id = "@Model.Day.Id" > Schedule Appointment </ a >

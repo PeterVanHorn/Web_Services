@@ -21,6 +21,7 @@ namespace VanHorn_WebServices_Final.Pages.Timeslots
 
         [BindProperty]
         public Timeslot Timeslot { get; set; } = default!;
+        public Customer Customer { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -35,13 +36,15 @@ namespace VanHorn_WebServices_Final.Pages.Timeslots
                 return NotFound();
             }
             Timeslot = timeslot;
-           ViewData["CustomerId"] = new SelectList(_context.Customers, "CId", "CId");
            ViewData["ServiceProviderId"] = new SelectList(_context.ServiceProviders, "SPId", "SPId");
             return Page();
         }
 
         public async Task<IActionResult> OnPostAsync()
         {
+            Customer = await _context.Customers
+                .FirstOrDefaultAsync(c => c.FirstName == User.Identity.Name);
+            Timeslot.CustomerId = Customer.CId;
             Timeslot.IsTaken = true;
             _context.Attach(Timeslot).State = EntityState.Modified;
 
@@ -61,7 +64,7 @@ namespace VanHorn_WebServices_Final.Pages.Timeslots
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Customers/Details", new {id = Customer.CId});
         }
 
         private bool TimeslotExists(int id)

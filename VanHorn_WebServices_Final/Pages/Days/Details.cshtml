@@ -5,16 +5,11 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>@Model.Day.Id</h1>
 
 <div>
-    <h4>Day</h4>
+    <h4>Openings</h4>
     <hr />
-    <dl class="row">
-        <dd class="col-sm-10">
-            @Model.Day.Id
-        </dd>
-    </dl>
     <table class="table">
         <tbody>
             @{
@@ -33,7 +28,6 @@
                                     optionNum++;
                                 }
                             </ul>
-                            
                         }
                     }
                     else
@@ -46,5 +40,5 @@
     </table>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Day.Id">Edit</a> |
+    <a asp-page="/Index"> Cancel</a>
 </div>
