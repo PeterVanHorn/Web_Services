@@ -22,25 +22,23 @@
             }
             <tr>
                 <td>
-                    @if (Model.Day.Timeslots != null)
+                    <header>Timeslots</header>
+                    @if (Model.Day.Timeslots.Count < 5)
                     {
-                        @foreach (var item in Model.Day.Timeslots)
+                        @foreach (var item in Model.Day.Timeslots.Where(t => !t.IsTaken))
                         {
-                            <header>Timeslots</header>
                             <ul>
-                                <li>Timeslot @optionNum: @item.ServiceProvider @item.Customer</li>
+                                <li><a asp-page="/Timeslots/Edit" asp-route-dayId="@Model.Day.Id" asp-route-id="@item.TId"> @item.StartTime</a></li>
                                 @{
                                     optionNum++;
                                 }
                             </ul>
-                            string dayId = Model.Day.Id;
-                            <a asp-page="/Timeslots/Edit" asp-route-dayId="@dayId" asp-route-id="@item.TId">Edit TimeSlot</a>
+                            
                         }
                     }
                     else
                     {
-                        <p>Nothing scheduled for today</p>
-                        <a asp-page="/Timeslots/Create" asp-route-id="@Model.Day.Id">Schedule Appointment</a>
+                        <p>Nothing available for today</p>
                     }
                 </td>
             </tr>

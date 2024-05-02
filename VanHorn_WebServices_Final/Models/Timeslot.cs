@@ -12,5 +12,8 @@ namespace VanHorn_WebServices_Final.Models
         public int? CustomerId { get; set; }
         public ServiceProvider ServiceProvider { get; set; }
         public int? ServiceProviderId { get; set; }
+        public TimeSpan StartTime { get; set; }
+        public TimeSpan Duration { get; set; }
+        public bool IsTaken { get; set; }
     }
 }

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="~/js/site.js" defer></script>
+    @* <script src="~/js/site.js" defer></script> *@
 </head>
 <body>
         <div class="wrapper">
@@ -37,77 +37,78 @@
 </body>
 </html>
 <script>
-    // const currentDate = document.querySelector(".current-date"),
-    //     daysTag = document.querySelector(".days"),
-    //     prevNextIcon = document.querySelectorAll(".icons span");
+    const currentDate = document.querySelector(".current-date"),
+        daysTag = document.querySelector(".days"),
+        prevNextIcon = document.querySelectorAll(".icons span");
 
-    // let date = new Date();
-    // currYear = date.getFullYear();
-    // currMonth = date.getMonth();
+    let date = new Date();
+    currYear = date.getFullYear();
+    currMonth = date.getMonth();
 
-    // const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-    // const renderCalendar = () => {
-    //     let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // get first day of month
-    //         lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), //get last date of month
-    //         lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), //get last day of month
-    //         lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); //get last date of previous month
+    const renderCalendar = () => {
+        let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // get first day of month
+            lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), //get last date of month
+            lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), //get last day of month
+            lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); //get last date of previous month
 
-    //     let liTag = "";
+        let liTag = "";
 
-    //     for (let i = firstDayofMonth; i > 0; i--) { // create li of previous month last days
-    //         liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
-    //     }
+        for (let i = firstDayofMonth; i > 0; i--) { // create li of previous month last days
+            liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+        }
 
-    //     // experimental code for clicking on days to view their details page
-    //     for (let i = 1; i <= lastDateofMonth; i++) {
-    //         // Add unique IDs to each day element
-    //         let monthFormatted = (currMonth + 1).toString().padStart(2, '0');
-    //         let dayFormatted = i.toString().padStart(2, '0');
-    //         let dayId = `day-${currYear}-${monthFormatted}-${dayFormatted}`;
-    //         let isToday = i === date.getDate() && currMonth === new Date().getMonth()
-    //             && currYear === new Date().getFullYear() ? "active" : "";
-    //         liTag += `<li id="${dayId}" class="${isToday}">${i}</li>`;
-    //     }
+        // experimental code for clicking on days to view their details page
+        for (let i = 1; i <= lastDateofMonth; i++) {
+            // Add unique IDs to each day element
+            let monthFormatted = (currMonth + 1).toString().padStart(2, '0');
+            let dayFormatted = i.toString().padStart(2, '0');
+            let dayId = `day-${currYear}-${monthFormatted}-${dayFormatted}`;
+            let isToday = i === date.getDate() && currMonth === new Date().getMonth()
+                && currYear === new Date().getFullYear() ? "active" : "";
+            liTag += `<li id="${dayId}" class="${isToday}">${i}</li>`;
+        }
 
 
 
-    //     for (let i = lastDayofMonth; i < 6; i++) { // create li of next month first days
-    //         liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;
-    //     }
+        for (let i = lastDayofMonth; i < 6; i++) { // create li of next month first days
+            liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;
+        }
 
-    //     currentDate.innerText = `${months[currMonth]} ${currYear}`;
-    //     daysTag.innerHTML = liTag;
-    // }
-    // renderCalendar();
+        currentDate.innerText = `${months[currMonth]} ${currYear}`;
+        daysTag.innerHTML = liTag;
 
-    // prevNextIcon.forEach(icon => {
-    //     icon.addEventListener("click", () => {
-    //         currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
 
-    //         if (currMonth < 0 || currMonth > 11) {
-    //             date = new Date(currYear, currMonth);
-    //             currYear = date.getFullYear(); // update current year with new year
-    //             currMonth = date.getMonth(); // update current month with new month
-    //         }
-    //         else { // else pass new date as date
-    //             date = new Date();
-    //         }
-    //         renderCalendar();
-    //     });
-    // });
+        //will this work? I don't know
+        document.querySelectorAll('.days li').forEach(day => {
+            day.addEventListener('click', () => {
+                // Extract the day, month, and year from the day ID
+                let [_, year, month, dayOfMonth] = day.id.split('-');
 
-    // // Add click event listener to each day
-    // document.querySelectorAll('.days li').forEach(day => {
-    //     day.addEventListener('click', () => {
-    //         // Extract the day, month, and year from the day ID
-    //         let [_, year, month, dayOfMonth] = day.id.split('-');
+                // Create a Date object representing the clicked date
+                let clickedDate = `${year}-${month}-${dayOfMonth}`;
 
-    //         // Create a Date object representing the clicked date
-    //         let clickedDate = `${year}-${month}-${dayOfMonth}`;
+                // Redirect to details page with the selected date information
+                window.location.href = `/Days/Details?id=${clickedDate}`;
+            });
+        });
+    }
+    renderCalendar();
 
-    //         // Redirect to details page with the selected date information
-    //         window.location.href = `/Days/Details?id=${clickedDate}`;
-    //     });
-    // });
+    prevNextIcon.forEach(icon => {
+        icon.addEventListener("click", () => {
+            currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
+
+            if (currMonth < 0 || currMonth > 11) {
+                date = new Date(currYear, currMonth);
+                currYear = date.getFullYear(); // update current year with new year
+                currMonth = date.getMonth(); // update current month with new month
+            }
+            else { // else pass new date as date
+                date = new Date();
+            }
+            renderCalendar();
+        });
+    });
 </script>

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VanHorn_WebServices_Final.Models
 {
@@ -6,6 +7,9 @@ namespace VanHorn_WebServices_Final.Models
     {
         [Key]
         public int CId { get; set; }
+        public Credential Credential { get; set; }
+        [ForeignKey("Credential")]
+        public int? CredentialId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string City { get; set; }

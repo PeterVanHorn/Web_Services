@@ -22,6 +22,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Timeslot[0].ServiceProvider)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Timeslot[0].StartTime)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -32,10 +35,13 @@
                 @Html.DisplayFor(modelItem => item.DayId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Customer.CId)
+                @Html.DisplayFor(modelItem => item.Customer.LastName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ServiceProvider.SPId)
+                @Html.DisplayFor(modelItem => item.ServiceProvider.BusinessName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTime)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.TId">Edit</a> |

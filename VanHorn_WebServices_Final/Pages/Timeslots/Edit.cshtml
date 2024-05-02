@@ -14,11 +14,8 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Timeslot.TId" />
-            <div class="form-group">
-                <label asp-for="Timeslot.DayId" class="control-label"></label>
-                <input asp-for="Timeslot.DayId" class="form-control" />
-                <span asp-validation-for="Timeslot.DayId" class="text-danger"></span>
-            </div>
+            <input type="hidden" asp-for="Timeslot.DayId" />
+            <input type="hidden" asp-for="Timeslot.StartTime" />
             <div class="form-group">
                 <label asp-for="Timeslot.CustomerId" class="control-label"></label>
                 <select asp-for="Timeslot.CustomerId" class="form-control" asp-items="ViewBag.CustomerId"></select>

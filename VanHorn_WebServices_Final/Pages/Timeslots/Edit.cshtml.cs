@@ -40,15 +40,9 @@ namespace VanHorn_WebServices_Final.Pages.Timeslots
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
+            Timeslot.IsTaken = true;
             _context.Attach(Timeslot).State = EntityState.Modified;
 
             try

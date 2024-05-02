@@ -8,7 +8,7 @@ namespace VanHorn_WebServices_Final.Pages.Account
     {
         public async Task<IActionResult> OnPostAsync()
         {
-            await HttpContext.SignOutAsync("MyCookieAuth");
+            await HttpContext.SignOutAsync("ThisCookieAuth");
             return RedirectToPage("/Index");
         }
     }
