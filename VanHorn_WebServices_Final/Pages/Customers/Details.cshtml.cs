@@ -26,8 +26,18 @@ namespace VanHorn_WebServices_Final.Pages.Customers
             {
                 return NotFound();
             }
-
             var customer = await _context.Customers.FirstOrDefaultAsync(m => m.CId == id);
+            var timeslots = await _context.Timeslots
+                .Where(t => t.CustomerId == customer.CId)
+                .ToListAsync();
+
+            foreach (var timeslot in timeslots)
+            {
+                if (timeslot != null && timeslot.CustomerId != customer.CId)
+                {
+                    timeslots.Remove(timeslot);
+                }
+            }
             if (customer == null)
             {
                 return NotFound();
@@ -35,6 +45,7 @@ namespace VanHorn_WebServices_Final.Pages.Customers
             else
             {
                 Customer = customer;
+                Customer.Timeslots = timeslots;
             }
             return Page();
         }

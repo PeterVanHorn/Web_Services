@@ -21,7 +21,6 @@ namespace VanHorn_WebServices_Final.Pages.Account
         [BindProperty]
         public Credential Credential { get; set; }
         public IList<Customer> Customers { get; set; } = default!;
-        public IList<Credential> Credentials { get; set; } = default!;
         public void OnGet()
         {
             _context.Database.EnsureCreated();
@@ -31,24 +30,27 @@ namespace VanHorn_WebServices_Final.Pages.Account
             //if (!ModelState.IsValid) return Page();
 
             Customers = await _context.Customers.ToListAsync();
-            Credentials = await _context.Credentials.ToListAsync();
 
-            //verify
-            if (Credential.UserName == Credentials[0].UserName && Credential.Password == Credentials[0].Password)
+            foreach(var customer in Customers)
             {
-                // create security context
-                var claims = new List<Claim>
+                Credential cred = await _context.Credentials
+                    .FirstOrDefaultAsync(d => d.CustomerId == customer.CId);
+                if (Credential.UserName == cred.UserName && Credential.Password == cred.Password)
                 {
-                    new Claim(ClaimTypes.Name, Customers[0].FirstName),
-                    new Claim(ClaimTypes.Email, Customers[0].Email),
+                    // create security context
+                    var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, customer.FirstName),
+                    new Claim(ClaimTypes.Email, customer.Email),
                     new Claim("Customer", "True")
                 };
-                var identity = new ClaimsIdentity(claims, "ThisCookieAuth");
-                ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
+                    var identity = new ClaimsIdentity(claims, "ThisCookieAuth");
+                    ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
 
-                await HttpContext.SignInAsync("ThisCookieAuth", claimsPrincipal);
+                    await HttpContext.SignInAsync("ThisCookieAuth", claimsPrincipal);
 
-                return RedirectToPage("/Index");
+                    return RedirectToPage("/Index");
+                }
             }
 
             //if (Credential.UserName == "customer" && Credential.Password == "password")

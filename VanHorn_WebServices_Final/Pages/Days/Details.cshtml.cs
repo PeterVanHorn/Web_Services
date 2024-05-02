@@ -27,7 +27,6 @@ namespace VanHorn_WebServices_Final.Pages.Days
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
-            _context.Database.EnsureCreated();
             Timeslots = await _context.Timeslots.ToListAsync();
             if (id == null)
             {

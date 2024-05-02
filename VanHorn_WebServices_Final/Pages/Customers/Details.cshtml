@@ -60,8 +60,36 @@
             @Html.DisplayFor(model => model.Customer.Phone)
         </dd>
     </dl>
+    <h4>Appointments</h4>
+    <hr />
+    <table class="table">
+        <tbody>
+            @{
+                int optionNum = 1;
+            }
+            <tr>
+                <td>
+                    @if (Model.Customer.Timeslots.Count != 0)
+                    {
+                        @foreach (var item in Model.Customer.Timeslots)
+                        {
+                            <ul>
+                                <li><a asp-page="/Timeslots/Edit" asp-route-dayId="@Model.Customer.CId" asp-route-id="@item.TId"> @item.StartTime</a></li>
+                                @{
+                                    optionNum++;
+                                }
+                            </ul>
+                        }
+                    }
+                    else
+                    {
+                        <p>Nothing Scheduled</p>
+                    }
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 <div>
     <a asp-page="./Edit" asp-route-id="@Model.Customer.CId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
 </div>

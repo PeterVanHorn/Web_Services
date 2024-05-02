@@ -47,7 +47,6 @@ namespace VanHorn_WebServices_Final.Pages.Timeslots
             Timeslot.CustomerId = Customer.CId;
             Timeslot.IsTaken = true;
             _context.Attach(Timeslot).State = EntityState.Modified;
-
             try
             {
                 await _context.SaveChangesAsync();
