@@ -1,4 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿//Peter Van Horn
+//Web Services Final
+//05/03/2024
+//Customer model
+
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VanHorn_WebServices_Final.Models

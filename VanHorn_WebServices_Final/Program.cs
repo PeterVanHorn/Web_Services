@@ -16,6 +16,7 @@ builder.Services.AddAuthentication("ThisCookieAuth").AddCookie("ThisCookieAuth",
     options.AccessDeniedPath = "/Account/AccessDenied";
 });
 
+//declaring authorization policies
 builder.Services.AddAuthorization(Options =>
 {
     Options.AddPolicy("ServiceOnly",

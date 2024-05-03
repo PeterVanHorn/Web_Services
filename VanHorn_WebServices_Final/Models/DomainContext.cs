@@ -1,9 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿//Peter Van Horn
+//Web Services Final
+//05/03/2024
+//Context Class
+
+using Microsoft.EntityFrameworkCore;
 using NuGet.DependencyResolver;
 
 namespace VanHorn_WebServices_Final.Models
 {
-    // julian date might be usefull for resetting day objects once the day is in the past.
     public class DomainContext : DbContext
     {
         public DbSet<Credential> Credentials { get; set; }

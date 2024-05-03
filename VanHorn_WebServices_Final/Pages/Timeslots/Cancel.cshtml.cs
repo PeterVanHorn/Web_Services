@@ -1,3 +1,8 @@
+//Peter Van Horn
+//Web Services Final
+//05/03/2024
+//Custom Cancel RazorPage sort of a combo of the default Delete and Edit pages
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
