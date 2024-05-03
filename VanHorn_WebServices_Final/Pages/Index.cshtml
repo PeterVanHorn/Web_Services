@@ -13,12 +13,22 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    @if (User.Identity.IsAuthenticated)
+    @if (User.Identity.IsAuthenticated && User.Identity.Name != "service")
     {
         <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
             <ul class="navbar-nav flex-grow-1">
                 <li class="nav-item">
                     <a class="nav-link text-dark" asp-area="" asp-page="/Customers/Details" asp-route-id="@Model.Customer.CId">My appointments</a>
+                </li>
+            </ul>
+        </div>
+    }
+    @if (User.Identity.IsAuthenticated && User.Identity.Name == "service")
+    {
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Businesses/Details" asp-route-id="@Model">My appointments</a>
                 </li>
             </ul>
         </div>

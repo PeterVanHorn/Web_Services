@@ -10,7 +10,7 @@ namespace VanHorn_WebServices_Final.Models
         public DbSet<Timeslot> Timeslots { get; set; }
         public DbSet<Day> Days { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<Business> ServiceProviders { get; set; }
+        public DbSet<Business> Businesses { get; set; }
         public DomainContext(DbContextOptions<DomainContext> options) : base(options)
         {
         }
@@ -50,15 +50,19 @@ namespace VanHorn_WebServices_Final.Models
             Credential frenchCred = new Credential() { Id = 2, UserName = "steve", Password = "french", CustomerId = 2 };
             steveFrench.CredentialId = 2;
 
-            IList<Credential> credentials = [doleCred, frenchCred];
-            modelBuilder.Entity<Credential>().HasData(credentials);
-
             IList<Customer> customers = [bobDole, steveFrench];
             modelBuilder.Entity<Customer>().HasData(customers);
 
-            IList<Business> serviceproviders = new List<Business>();
-            serviceproviders.Add(new Business() { SPId = 1, BusinessName = "ABC Plumbing", City = "Helena", State = "MT", Country = "United States", Phone = "406-111-2222", Timeslots = [] });
-            modelBuilder.Entity<Business>().HasData(serviceproviders);
+            Business plumber = new Business() { SPId = 1, BusinessName = "ABC Plumbing", City = "Helena", State = "MT", Country = "United States", Phone = "406-111-2222", Timeslots = [] };
+            Credential plumbCred = new Credential() { Id = 3, UserName = "plumb", Password = "password"};
+            plumber.CredentialId = 3;
+
+            IList<Credential> credentials = [doleCred, frenchCred, plumbCred];
+            modelBuilder.Entity<Credential>().HasData(credentials);
+
+            IList<Business> businesses = new List<Business>();
+            businesses.Add(plumber);
+            modelBuilder.Entity<Business>().HasData(businesses);
         }
     }
 }

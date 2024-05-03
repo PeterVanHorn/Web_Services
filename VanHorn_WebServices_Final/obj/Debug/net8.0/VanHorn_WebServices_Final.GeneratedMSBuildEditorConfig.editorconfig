@@ -17,119 +17,139 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = VanHorn_WebServices_Final
 build_property.RootNamespace = VanHorn_WebServices_Final
-build_property.ProjectDir = C:\GitHubRepos\Web_Services\VanHorn_WebServices_Final\
+build_property.ProjectDir = C:\repos\Web_Services\VanHorn_WebServices_Final\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\GitHubRepos\Web_Services\VanHorn_WebServices_Final
+build_property.MSBuildProjectDirectory = C:\repos\Web_Services\VanHorn_WebServices_Final
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Account/AccessDenied.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Account/Login.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Account/Logout.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Customers/Create.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Businesses/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnVzaW5lc3Nlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Businesses/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnVzaW5lc3Nlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Businesses/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnVzaW5lc3Nlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Businesses/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnVzaW5lc3Nlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Businesses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnVzaW5lc3Nlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Customers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Customers/Delete.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Customers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Customers/Details.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Customers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Customers/Edit.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Customers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Customers/Index.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Customers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Days/Create.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Days/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF5c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Days/Delete.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Days/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF5c1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Days/Details.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Days/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF5c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Days/Edit.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Days/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF5c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Days/Index.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Days/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF5c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Error.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Index.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Privacy.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Shared/_LoginStatusPartial.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Shared/_LoginStatusPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblN0YXR1c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Cancel.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Cancel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGltZXNsb3RzXENhbmNlbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Create.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGltZXNsb3RzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Delete.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGltZXNsb3RzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Details.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGltZXNsb3RzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Edit.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGltZXNsb3RzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Index.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGltZXNsb3RzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/_ViewImports.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/_ViewStart.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Shared/_Layout.cshtml]
+[C:/repos/Web_Services/VanHorn_WebServices_Final/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-64sucvsihg

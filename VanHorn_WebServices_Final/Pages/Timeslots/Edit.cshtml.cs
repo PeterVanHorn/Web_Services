@@ -36,7 +36,7 @@ namespace VanHorn_WebServices_Final.Pages.Timeslots
                 return NotFound();
             }
             Timeslot = timeslot;
-           ViewData["ServiceProviderId"] = new SelectList(_context.ServiceProviders, "SPId", "BusinessName");
+           ViewData["ServiceProviderId"] = new SelectList(_context.Businesses, "SPId", "BusinessName");
             return Page();
         }
 

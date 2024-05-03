@@ -21,6 +21,7 @@ namespace VanHorn_WebServices_Final.Pages.Account
         [BindProperty]
         public Credential Credential { get; set; }
         public IList<Customer> Customers { get; set; } = default!;
+        public IList<Business> Businesses { get; set; } = default!;
         public void OnGet()
         {
             _context.Database.EnsureCreated();
@@ -30,6 +31,7 @@ namespace VanHorn_WebServices_Final.Pages.Account
             //if (!ModelState.IsValid) return Page();
 
             Customers = await _context.Customers.ToListAsync();
+            Businesses = await _context.Businesses.ToListAsync();
 
             foreach(var customer in Customers)
             {
@@ -69,22 +71,24 @@ namespace VanHorn_WebServices_Final.Pages.Account
             //    return RedirectToPage("/Index");
             //}
 
-            if (Credential.UserName == "service" && Credential.Password == "password")
+            foreach (var business in Businesses)
             {
-                // create security context
-                var claims = new List<Claim>
+                if (Credential.UserName == "service" && Credential.Password == "password")
+                {
+                    // create security context
+                    var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, "service"),
                     new Claim("Service", "True")
                 };
-                var identity = new ClaimsIdentity(claims, "ThisCookieAuth");
-                ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
+                    var identity = new ClaimsIdentity(claims, "ThisCookieAuth");
+                    ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
 
-                await HttpContext.SignInAsync("ThisCookieAuth", claimsPrincipal);
+                    await HttpContext.SignInAsync("ThisCookieAuth", claimsPrincipal);
 
-                return RedirectToPage("/Index");
+                    return RedirectToPage("/Index");
+                }
             }
-
             return Page();
         }
     }

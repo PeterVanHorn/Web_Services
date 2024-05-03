@@ -29,7 +29,7 @@ namespace VanHorn_WebServices_Final.Pages.Timeslots
             List<TimeSpan> Startlist = new List<TimeSpan> { time1, time2, time3, time4 };
             ViewData["StartTimes"] = new SelectList(Startlist);
             ViewData["CustomerId"] = new SelectList(_context.Customers, "CId", "LastName");
-            ViewData["ServiceProviderId"] = new SelectList(_context.ServiceProviders, "SPId", "BusinessName");
+            ViewData["ServiceProviderId"] = new SelectList(_context.Businesses, "SPId", "BusinessName");
             return Page();
         }
 
