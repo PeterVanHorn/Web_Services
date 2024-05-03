@@ -32,6 +32,9 @@ namespace VanHorn_WebServices_Final.Pages.Businesses
             }
 
             var business = await _context.Businesses.FirstOrDefaultAsync(m => m.SPId == id);
+            var timeslots = await _context.Timeslots
+                .Where(t => t.ServiceProviderId == business.SPId)
+                .ToListAsync();
             if (business == null)
             {
                 return NotFound();
@@ -39,6 +42,7 @@ namespace VanHorn_WebServices_Final.Pages.Businesses
             else
             {
                 Business = business;
+                Business.Timeslots = timeslots;
             }
             return Page();
         }

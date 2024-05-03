@@ -18,5 +18,7 @@ namespace VanHorn_WebServices_Final.Models
         public string Password { get; set; }
         public Customer Customer { get; set; }
         public int? CustomerId { get; set; }
+        public Business Business { get; set; }
+        public int? BusinessId { get; set; }
     }
 }

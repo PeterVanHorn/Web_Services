@@ -77,12 +77,15 @@ namespace VanHorn_WebServices_Final.Pages.Account
 
             foreach (var business in Businesses)
             {
-                if (Credential.UserName == "service" && Credential.Password == "password")
+                Credential cred = await _context.Credentials
+                    .FirstOrDefaultAsync(d => d.BusinessId == business.SPId);
+                if (Credential.UserName == cred.UserName && Credential.Password == cred.Password)
                 {
                     // create security context
                     var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, "service"),
+                    new Claim(ClaimTypes.Name, business.BusinessName),
+                    new Claim(ClaimTypes.NameIdentifier, business.SPId.ToString()),
                     new Claim("Service", "True")
                 };
                     var identity = new ClaimsIdentity(claims, "ThisCookieAuth");

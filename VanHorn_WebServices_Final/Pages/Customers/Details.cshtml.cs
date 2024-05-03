@@ -36,13 +36,13 @@ namespace VanHorn_WebServices_Final.Pages.Customers
                 .Where(t => t.CustomerId == customer.CId)
                 .ToListAsync();
 
-            foreach (var timeslot in timeslots)
-            {
-                if (timeslot != null && timeslot.CustomerId != customer.CId)
-                {
-                    timeslots.Remove(timeslot);
-                }
-            }
+            //foreach (var timeslot in timeslots)
+            //{
+            //    if (timeslot != null && timeslot.CustomerId != customer.CId)
+            //    {
+            //        timeslots.Remove(timeslot);
+            //    }
+            //}
             if (customer == null)
             {
                 return NotFound();

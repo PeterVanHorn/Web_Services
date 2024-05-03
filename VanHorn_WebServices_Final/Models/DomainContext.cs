@@ -58,7 +58,7 @@ namespace VanHorn_WebServices_Final.Models
             modelBuilder.Entity<Customer>().HasData(customers);
 
             Business plumber = new Business() { SPId = 1, BusinessName = "ABC Plumbing", City = "Helena", State = "MT", Country = "United States", Phone = "406-111-2222", Timeslots = [] };
-            Credential plumbCred = new Credential() { Id = 3, UserName = "plumb", Password = "password"};
+            Credential plumbCred = new Credential() { Id = 3, UserName = "plumb", Password = "password", BusinessId = 1};
             plumber.CredentialId = 3;
 
             IList<Credential> credentials = [doleCred, frenchCred, plumbCred];
