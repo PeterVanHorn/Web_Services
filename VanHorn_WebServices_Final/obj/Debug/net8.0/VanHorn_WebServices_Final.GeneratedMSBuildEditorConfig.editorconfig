@@ -98,6 +98,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Cancel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGltZXNsb3RzXENhbmNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/GitHubRepos/Web_Services/VanHorn_WebServices_Final/Pages/Timeslots/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGltZXNsb3RzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

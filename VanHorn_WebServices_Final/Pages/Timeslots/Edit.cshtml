@@ -17,7 +17,7 @@
             <input type="hidden" asp-for="Timeslot.DayId" />
             <input type="hidden" asp-for="Timeslot.StartTime" />
             <div class="form-group">
-                <label asp-for="Timeslot.ServiceProviderId" class="control-label"></label>
+                <label asp-for="Timeslot.ServiceProviderId" class="control-label"> Business</label>
                 <select asp-for="Timeslot.ServiceProviderId" class="form-control" asp-items="ViewBag.ServiceProviderId"></select>
                 <span asp-validation-for="Timeslot.ServiceProviderId" class="text-danger"></span>
             </div>

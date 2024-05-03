@@ -36,7 +36,7 @@ namespace VanHorn_WebServices_Final.Pages.Timeslots
                 return NotFound();
             }
             Timeslot = timeslot;
-           ViewData["ServiceProviderId"] = new SelectList(_context.ServiceProviders, "SPId", "SPId");
+           ViewData["ServiceProviderId"] = new SelectList(_context.ServiceProviders, "SPId", "BusinessName");
             return Page();
         }
 
@@ -62,7 +62,6 @@ namespace VanHorn_WebServices_Final.Pages.Timeslots
                     throw;
                 }
             }
-
             return RedirectToPage("/Customers/Details", new {id = Customer.CId});
         }
 

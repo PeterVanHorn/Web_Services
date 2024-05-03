@@ -6,13 +6,13 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    display: flex;
+    /*display: flex;*/
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     background: #0094ff;
 }
-.wrapper{
+.wrapper {
     width: 450px;
     background: #fff;
     border-radius: 10px;

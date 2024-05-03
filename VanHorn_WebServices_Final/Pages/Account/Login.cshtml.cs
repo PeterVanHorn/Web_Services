@@ -41,7 +41,7 @@ namespace VanHorn_WebServices_Final.Pages.Account
                     var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, customer.FirstName),
-                    new Claim(ClaimTypes.Email, customer.Email),
+                    new Claim(ClaimTypes.NameIdentifier, customer.CId.ToString()),
                     new Claim("Customer", "True")
                 };
                     var identity = new ClaimsIdentity(claims, "ThisCookieAuth");

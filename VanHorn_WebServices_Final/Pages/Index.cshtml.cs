@@ -13,10 +13,14 @@ namespace VanHorn_WebServices_Final.Pages
         {
             _context = context;
         }
+        [BindProperty]
+        public Customer Customer { get; set; }
 
         public void OnGet()
         {
             _context.Database.EnsureCreated();
+            var customer = _context.Customers.Where(c => c.FirstName == User.Identity.Name).FirstOrDefault();
+            Customer = customer;
         }
     }
 }

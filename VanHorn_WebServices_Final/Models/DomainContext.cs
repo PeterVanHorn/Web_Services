@@ -10,7 +10,7 @@ namespace VanHorn_WebServices_Final.Models
         public DbSet<Timeslot> Timeslots { get; set; }
         public DbSet<Day> Days { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<ServiceProvider> ServiceProviders { get; set; }
+        public DbSet<Business> ServiceProviders { get; set; }
         public DomainContext(DbContextOptions<DomainContext> options) : base(options)
         {
         }
@@ -31,7 +31,7 @@ namespace VanHorn_WebServices_Final.Models
                 .WithOne(d => d.Customer)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<ServiceProvider>()
+            modelBuilder.Entity<Business>()
                 .HasMany(e => e.Timeslots)
                 .WithOne(q => q.ServiceProvider)
                 .OnDelete(DeleteBehavior.Cascade);
@@ -46,17 +46,19 @@ namespace VanHorn_WebServices_Final.Models
             Credential doleCred = new Credential() { Id = 1, UserName = "bob", Password = "dole", CustomerId = 1 };
             bobDole.CredentialId = 1;
 
-            IList<Customer> customers = new List<Customer>();
-            customers.Add(bobDole);
-            modelBuilder.Entity<Customer>().HasData(customers);
+            Customer steveFrench = new Customer() { CId = 2, FirstName = "Steve", LastName = "French", City = "Butte", State = "MT", Country = "United States", Email = "Steven@example.com", Phone = "444-333-2222", Timeslots = [] };
+            Credential frenchCred = new Credential() { Id = 2, UserName = "steve", Password = "french", CustomerId = 2 };
+            steveFrench.CredentialId = 2;
 
-            IList<Credential> credentials = new List<Credential>();
-            credentials.Add(doleCred);
+            IList<Credential> credentials = [doleCred, frenchCred];
             modelBuilder.Entity<Credential>().HasData(credentials);
 
-            IList<ServiceProvider> serviceproviders = new List<ServiceProvider>();
-            serviceproviders.Add(new ServiceProvider() { SPId = 1, BusinessName = "ABC Plumbing", City = "Helena", State = "MT", Country = "United States", Phone = "406-111-2222", Timeslots = [] });
-            modelBuilder.Entity<ServiceProvider>().HasData(serviceproviders);
+            IList<Customer> customers = [bobDole, steveFrench];
+            modelBuilder.Entity<Customer>().HasData(customers);
+
+            IList<Business> serviceproviders = new List<Business>();
+            serviceproviders.Add(new Business() { SPId = 1, BusinessName = "ABC Plumbing", City = "Helena", State = "MT", Country = "United States", Phone = "406-111-2222", Timeslots = [] });
+            modelBuilder.Entity<Business>().HasData(serviceproviders);
         }
     }
 }

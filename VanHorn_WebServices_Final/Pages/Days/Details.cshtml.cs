@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Azure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Routing;
@@ -13,6 +14,7 @@ using VanHorn_WebServices_Final.Models;
 
 namespace VanHorn_WebServices_Final.Pages.Days
 {
+    [Authorize(Policy = "CustomerOnly")]
     public class DetailsModel : PageModel
     {
         private readonly VanHorn_WebServices_Final.Models.DomainContext _context;

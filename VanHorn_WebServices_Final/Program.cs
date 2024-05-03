@@ -20,6 +20,8 @@ builder.Services.AddAuthorization(Options =>
 {
     Options.AddPolicy("ServiceOnly",
         policy => policy.RequireClaim("Service"));
+    Options.AddPolicy("CustomerOnly",
+        policy => policy.RequireClaim("Customer"));
 });
 
 var app = builder.Build();
