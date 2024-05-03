@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|c:\\githubrepos\\web_services\\vanhorn_webservices_final\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|solutionrelative:pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|c:\\githubrepos\\web_services\\vanhorn_webservices_final\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|c:\\githubrepos\\web_services\\vanhorn_webservices_final\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|solutionrelative:pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|c:\\githubrepos\\web_services\\vanhorn_webservices_final\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|solutionrelative:pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C6B8C87-C6EC-46C3-964C-0E683A0D6671}|VanHorn_WebServices_Final.csproj|c:\\githubrepos\\web_services\\vanhorn_webservices_final\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -34,7 +34,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "style.css",
               "DocumentMoniker": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\wwwroot\\style.css",
               "RelativeDocumentMoniker": "wwwroot\\style.css",
@@ -42,12 +42,11 @@
               "RelativeToolTip": "wwwroot\\style.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-03T03:09:38.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T03:09:38.403Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml",
@@ -62,7 +61,7 @@
         },
         {
           "DockedWidth": 196,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -74,12 +73,11 @@
               "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-03T02:51:57.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T02:51:57.073Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Login.cshtml.cs",
               "DocumentMoniker": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\Pages\\Account\\Login.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Account\\Login.cshtml.cs",
@@ -92,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\GitHubRepos\\Web_Services\\VanHorn_WebServices_Final\\Pages\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Pages\\Account\\Login.cshtml",
